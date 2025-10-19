@@ -2,7 +2,13 @@
 
 # 🧩 Infographic Generation System — Setup & Run Guide
 
-
+A FastAPI-based backend that lets users:
+- Upload product images & structured data (CSV/JSON)
+- Use predefined templates & charts
+- Generate dynamic infographic outputs (PNG/PDF)
+- Authenticate with JWT
+- Store asset metadata in PostgreSQL
+- Run locally or in Docker easily
 
 ## 🚀 — Run Locally 
 

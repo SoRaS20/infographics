@@ -71,6 +71,96 @@ Open Swagger:
 
 ---
 
+
+
+## 🧪 Test the Application (via Swagger or Postman)
+
+### 1) Register a User
+`POST /auth/register`
+```json
+{
+  "username": "testuser",
+  "password": "testpassword"
+}
+````
+
+Returns: `access_token` (JWT)
+
+---
+
+### 2) Log In
+
+`POST /auth/login` (Form-Data)
+
+```
+username = testuser
+password = testpassword
+```
+
+Copy `access_token`
+Use in headers:
+
+```
+Authorization: Bearer <token>
+```
+
+---
+
+### 3) Upload Assets
+
+* `POST /uploads/image` → upload `.png` or `.jpg` (max 5MB)
+* `POST /uploads/data`  → upload `.csv` or `.json` (max 1MB)
+
+**Example CSV**
+
+```csv
+product_name,price
+Widget,29.99
+```
+
+---
+
+### 4) List Available Templates
+
+`GET /templates`
+Shows for example: `template1`, `template2`, etc.
+
+---
+
+### 5) Generate Infographic
+
+`POST /generate`
+
+```json
+{
+  "template": "template1",
+  "images": { "product_image": 1 },
+  "data_asset_id": 2,
+  "charts": [
+    {
+      "key": "sales_chart",
+      "chart_type": "bar",
+      "x_col": "product_name",
+      "y_col": "price",
+      "title": "Product Prices"
+    }
+  ],
+  "format": "png"
+}
+```
+
+> Replace `1` and `2` with actual `asset_id` values returned from uploads.
+> Response = downloadable PNG or PDF.
+
+---
+
+### 6) Stop the Application
+
+```
+Ctrl + C     # stop FastAPI server
+deactivate   # exit virtual environment
+```
+
 ### 🧩 API Endpoints
 
 ![API Endpoints](outputs/api.png)

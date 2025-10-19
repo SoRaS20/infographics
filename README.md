@@ -70,3 +70,11 @@ Open Swagger:
 [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ---
+
+### 🧩 API Endpoints
+
+![API Endpoints](outputs/api.png)
+
+The system enables users to upload both an image and structured data (in CSV format). Once uploaded, the data is automatically integrated into a predefined infographic template, generating a polished and visually appealing infographic.
+
+![Generated Infographs](<outputs/infographic (6).png>)

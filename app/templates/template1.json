@@ -1,0 +1,23 @@
+{
+  "name": "Product Promo - Revised",
+  "size": {"width": 800, "height": 600},
+  "background_color": "#F0F0F0", 
+  "elements": [
+    {"type": "image", 
+     "key": "product_image", 
+     "position": {"x": 50, "y": 40, "w": 250, "h": 250}}, 
+    
+    {"type": "text", 
+     "key": "product_name", 
+     "position": {"x": 320, "y": 150}, 
+     "font_size": 32,
+     "color": "#333333",
+     "text_align": "left"}, 
+    
+    {"type": "chart", 
+     "key": "sales_chart", 
+     "position": {"x": 80, "y": 320, "w": 640, "h": 260}, 
+     "chart_type": "bar",
+     "background_color": "#FFFFFF"} 
+  ]
+}
